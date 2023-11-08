@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PhishMask</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	
+	<script src="button.js"></script>
+
+    <div id="navbar">
+        <img id="logo" alt="PhishMask Logo" src="navbar logo.png">
+        <div id="pause">
+            <a class="pause" href="pause.html" target="_blank">
+                <ion-icon name="pause-circle-outline"></ion-icon>
+            </a>
+        </div>
+        <div id="about">
+            <a class="about" href="about.html" target="_blank">
+                About
+            </a>
+        </div>
+    </div>
+
+    <div>
+        <h3>Blocked: (Numbers) </h3> <!--the numbers of the blocked websites-->
+    </div>
+
+    <div class="switch-toggle">
+		<label>
+		  	<input type="checkbox">
+		  	<span></span>
+		</label>
+        <span>(Status) </span> <!--Need to add the Status if On or Off-->
+	</div>
+
+    <div id="logs">
+        <button class="logs-button">
+            <a class="logs" href="#">
+                <ion-icon name="document-text-outline" id="logsIcon"></ion-icon>
+                <div>
+                    <span id="logsTxt">Open Logs</span> <!--It shows the overall logs of the block websites--> 
+                </div>
+            </a>
+        </button>  
+    </div>
+
+    <div  id="report">
+        <button class="outline-button">
+            <a class="report" href="#">
+                <ion-icon name="warning-outline" id="reportIcon"></ion-icon>
+                <div>
+                    <span id="reportTxt">Report Phishing</span> <!--the user report an suspicious websites-->
+                </div>     
+            </a>
+        </button>
+    </div>
+
+    <div  id="feedback">
+        <button class="outline-button">
+            <a class="feedback" href="#">
+                <ion-icon name="receipt-outline" id="feedbackIcon"></ion-icon>
+                <div id="feedbackTxt">
+                    <span>Feedback</span> <!--the user give Feedback-->
+                </div>
+            </a>
+        </button>
+        
+    </div>
+
+    <div id="footer">
+        <div id="fb">
+            <a class="fb-link" href="" target="_blank">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+        </div>
+        <div id="twitter">
+            <a class="twitter-link" href="" target="_blank">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+        </div>
+        <div id="discord">
+            <a class="discord-link" href="" target="_blank">
+                <ion-icon name="logo-discord"></ion-icon>
+            </a>
+        </div>
+
+        <div id="copyrights"><small>© 2023 PhishMask.
+            All rights reserved.</small></div>
+    </div>
+
+<script src="button.js"></script>
+</body>
+</html>
