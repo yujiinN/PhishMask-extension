@@ -1,0 +1,1 @@
+# PhishMask-extension
