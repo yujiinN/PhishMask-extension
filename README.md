@@ -1,7 +1,7 @@
 # PhishMask-extension
 
 
-**PhishMask is your ultimate defense against phishing attacks while you browse the web using Google Chrome. Phishing threats are more prevalent than ever, and your online security is of utmost importance. With PhishMask, you can surf the internet with confidence, knowing that your personal and financial information is safeguarded.**
+### **PhishMask is your ultimate defense against phishing attacks while you browse the web using Google Chrome. Phishing threats are more prevalent than ever, and your online security is of utmost importance. With PhishMask, you can surf the internet with confidence, knowing that your personal and financial information is safeguarded.**
 
 - Real-time Protection: PhishMask employs cutting-edge technology to analyze websites in real-time. It scans every webpage you visit to ensure it's legitimate and secure.
 
