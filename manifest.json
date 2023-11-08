@@ -1,9 +1,0 @@
-{
-  "manifest_version": 3,
-  "name": "PhishMask",
-  "version": "1.0.1",
-  "description": "Protection against phishing sites",
-  "action": {
-    "default_icon": "PhishMaskIconLogo.png"
-  }
-}
