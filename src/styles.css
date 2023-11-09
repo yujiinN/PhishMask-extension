@@ -132,3 +132,8 @@ body{
 #copyrights{
     margin-left: 80px;
 }
+
+form input{
+    width: 100px;
+    height: 100px;
+}
