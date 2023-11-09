@@ -1,14 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link href="styles.css" rel="stylesheet" type="text/css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link href="feedback.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PhishMask</title>
-</head>
-<body>
-    <form>
-        <input type="text" name="feedback" value="PhishMask">
-    </form>
-</body>
+  </head>
+  <body>
+    <div id="title">
+      <span class="title">Feedback Form</span>
+    </div>
+
+    <div id="formSection">
+      <div class="nameForm">
+        <div class="nameTxt">
+          <span>Name:</span>
+        </div>
+        <div>
+          <form>
+            <input id="name" type="text" name="name" />
+          </form>
+        </div>
+      </div>
+
+      <div class="emailForm">
+        <div class="emailTxt">
+          <span>Email:</span>
+        </div>
+        <div>
+          <form>
+            <input id="email" type="text" name="email" />
+          </form>
+        </div>
+      </div>
+
+      <div class="feedbackForm">
+        <div class="feedbackTxt">
+          <span>Feedback:</span>
+        </div>
+        <div>
+          <form>
+            <input id="feedback" type="text" name="feedback" />
+          </form>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="button">
+        <button class="btSubmit">
+            Submit
+        </button>
+      </div>
+      
+  </body>
 </html>
