@@ -30,17 +30,19 @@
     </div>
 
     <div>
-      <h3>Blocked: (Numbers)</h3>
+      <h3>Blocked: <span id="blockedCount">(0 websites)</span></h3>
       <!--the numbers of the blocked websites-->
     </div>
+    
 
     <div class="switch-toggle">
       <label>
-        <input type="checkbox" />
+        <input type="checkbox" id="toggleSwitch" onchange="updateStatus()" />
         <span></span>
       </label>
-      <span>(Status) </span>
+      <span id="statusText">(Status: )</span>
       <!--Need to add the Status if On or Off-->
+      <span id="onOffText"></span>
     </div>
 
     <div id="logs">
@@ -100,6 +102,8 @@
         <small>© 2023 PhishMask. All rights reserved.</small>
       </div>
     </div>
-    
+
+    <script src="main.js"></script>
+
   </body>
 </html>
