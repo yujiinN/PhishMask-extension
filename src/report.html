@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link href="report.css" rel="stylesheet" type="text/css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PhishMask</title>
-  </head>
+<head>
+  <link href="report.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhishMask</title>
+</head>
 
-  <body>
-    <div id="formContainer">
-      <div id="title">
-        <span class="title">Report Phishing</span>
-      </div>
+<body>
+  <div id="formContainer">
+    <div id="title">
+      <span class="title">Report Phishing</span>
+    </div>
 
-      <div id="formSection">
-        <div class="reportForm">
-          <div class="reportTxt">
+    <div id="formSection">
+      <div class="reportForm">
+        <div class="reportTxt">
           <div>
             <form>
               <textarea id="report" cols="15" rows="5" placeholder="Enter Phishing URL"></textarea>
@@ -23,12 +23,14 @@
           </div>
         </div>
       </div>
-
-      <div class="button">
-        <button class="btSubmit">Submit</button>
-      </div>
     </div>
 
+    <div class="button">
+      <button class="btSubmit" onclick="submitReport()">Submit</button>
+    </div>
+
+    <div id="reportMessageContainer"></div>
     <script src="report.js"></script>
-  </body>
+  </div>
+</body>
 </html>

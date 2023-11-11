@@ -1,70 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link href="feedback.css" rel="stylesheet" type="text/css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PhishMask</title>
-  </head>
+<head>
+  <link href="feedback.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhishMask</title>
+</head>
 
-  <body>
-    <div id="formContainer">
-      <div id="title">
-        <span class="title">Feedback Form</span>
-      </div>
-
-      <div id="formSection">
-        <div class="nameForm">
-          <div class="nameTxt">
-            <span id="label">Name:</span>
-          </div>
-          <div>
-            <form>
-              <input
-                id="name"
-                type="text"
-                name="name"
-                placeholder="Enter name"
-              />
-            </form>
-          </div>
-        </div>
-
-        <div class="emailForm">
-          <div class="emailTxt">
-            <span id="label">Email:</span>
-          </div>
-          <div>
-            <form>
-              <input
-                id="email"
-                type="text"
-                name="email"
-                placeholder="Enter email"
-              />
-            </form>
-          </div>
-        </div>
-
-        <div class="feedbackForm">
-          <div class="feedbackTxt">
-            <span id="label">Feedback:</span>
-          </div>
-          <div>
-            <form>
-              <textarea id="feedback" cols="15" rows="5" placeholder="Enter feedback"></textarea>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <div class="button">
-        <button class="btSubmit" onclick="submitFeedback()">Submit</button>
-      </div>
-
-      <div id="feedbackMessage"></div>
-      <script src="feedback.js"></script>
-      
+<body>
+  <div id="formContainer">
+    <div id="title">
+      <span class="title">Feedback Form</span>
     </div>
-  </body>
+
+    <div id="formSection">
+      <div class="nameForm">
+        <div class="nameTxt">
+          <span id="label">Name:</span>
+        </div>
+        <div>
+          <form>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Enter name"
+            />
+          </form>
+        </div>
+      </div>
+
+      <div class="emailForm">
+        <div class="emailTxt">
+          <span id="label">Email:</span>
+        </div>
+        <div>
+          <form>
+            <input
+              id="email"
+              type="text"
+              name="email"
+              placeholder="Enter email"
+            />
+          </form>
+        </div>
+      </div>
+
+      <div class="feedbackForm">
+        <div class="feedbackTxt">
+          <span id="label">Feedback:</span>
+        </div>
+        <div>
+          <form>
+            <textarea id="feedback" cols="15" rows="5" placeholder="Enter feedback"></textarea>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="button">
+      <button class="btSubmit" onclick="submitFeedback()">Submit</button>
+    </div>
+
+    <div id="feedbackMessageContainer"></div>
+    <script src="feedback.js"></script>
+  </div>
+</body>
 </html>

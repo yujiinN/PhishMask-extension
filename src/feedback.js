@@ -1,23 +1,26 @@
-function submitFeedback() {
-    // Get values from the form
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var feedback = document.getElementById("feedback").value;
+document.addEventListener("DOMContentLoaded", function () {
+    var submitButton = document.querySelector(".btSubmit");
+    var nameInput = document.getElementById("name");
+    var emailInput = document.getElementById("email");
+    var feedbackTextarea = document.getElementById("feedback");
+    var feedbackMessageContainer = document.getElementById("feedbackMessageContainer");
+  
+    submitButton.addEventListener("click", function () {
+      var name = nameInput.value;
+      var email = emailInput.value;
+      var feedback = feedbackTextarea.value;
+  
+      if (name.trim() !== "" && email.trim() !== "" && feedback.trim() !== "") {
+        window.location.href = "message.html";
 
-    // Construct the message
-    var message = "Thank you for your feedback";
-
-    // Display an alert with the message
-    alert(message);
-
-    // Optionally, you can clear the form fields
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("feedback").value = "";
-
-    // Redirect to the homepage
-    setTimeout(function () {
-        // Redirect to the homepage
-        window.location.href = "home.html"; // Replace "index.html" with the actual homepage URL
-      }, 950);
-    }
+        // Optionally, you can clear the form fields
+        nameInput.value = "";
+        emailInput.value = "";
+        feedbackTextarea.value = "";
+      } else {
+        var errorMessage = "Please fill in all fields.";
+        feedbackMessageContainer.textContent = errorMessage;
+      }
+    });
+  });
+  
