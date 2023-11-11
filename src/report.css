@@ -50,7 +50,7 @@ textarea {
     resize: none;
 }
 
-#feedback {
+#report {
     width: 100%;
     height: 150px;
     padding: 8px;
@@ -68,7 +68,7 @@ textarea::placeholder {
     transition: color 0.3s ease;
 }
 
-.feedbackTxt {
+.reportTxt {
     text-align: left;
 }
 
