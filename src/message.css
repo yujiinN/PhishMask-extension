@@ -34,3 +34,7 @@ body {
     font-weight: bold;
     color: #5478c0;
 }
+
+#messageSection{
+    margin-bottom: 5px;
+}
