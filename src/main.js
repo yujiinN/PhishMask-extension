@@ -1,41 +1,29 @@
-
 document.addEventListener("DOMContentLoaded", function () {
-    var statusText = document.getElementById("statusText");
-    var onOffText = document.getElementById("onOffText");
-    var toggleSwitch = document.getElementById("toggleSwitch");
-  
-    toggleSwitch.addEventListener("change", function () {
-      if (toggleSwitch.checked) {
-        statusText.innerText = "(Status: On)";
-      } else {
-        statusText.innerText = "(Status: Off)";
-      }
-    });
-  });
+  var statusText = document.getElementById("statusText");
+  var onOffText = document.getElementById("onOffText");
+  var toggleSwitch = document.getElementById("toggleSwitch");
 
-  document.addEventListener("DOMContentLoaded", function () {
-    let blockedCount = 0;
-  
-    function updateBlockedCount() {
-      const blockedCountElement = document.getElementById("blockedCount");
-      blockedCountElement.textContent = `(${blockedCount} ${blockedCount === 1 ? 'website' : 'websites'})`;
+  // Check if there's a stored state in localStorage
+  var storedState = localStorage.getItem("toggleState");
+
+  // Set the initial state based on the stored value
+  if (storedState === "on") {
+    toggleSwitch.checked = true;
+    statusText.innerText = "(Status: On)";
+  } else {
+    toggleSwitch.checked = false;
+    statusText.innerText = "(Status: Off)";
+  }
+
+  toggleSwitch.addEventListener("change", function () {
+    if (toggleSwitch.checked) {
+      statusText.innerText = "(Status: On)";
+      // Store the state in localStorage when the switch is turned on
+      localStorage.setItem("toggleState", "on");
+    } else {
+      statusText.innerText = "(Status: Off)";
+      // Store the state in localStorage when the switch is turned off
+      localStorage.setItem("toggleState", "off");
     }
-  
-    // Function to simulate detecting a phishing website
-    function detectPhishingWebsite() {
-      // Replace this logic with your actual phishing website detection logic
-      const isPhishing = Math.random() < 0.5; // Simulating a random detection result
-  
-      if (isPhishing) {
-        blockedCount++;
-        updateBlockedCount();
-        alert("Phishing website detected! Blocked count increased.");
-      } else {
-        alert("No phishing website detected.");
-      }
-    }
-  
-    // Example: Call the detectPhishingWebsite function when needed
-    // In a real scenario, you would call this function when your detection logic determines a phishing website.
-    detectPhishingWebsite();
   });
+});
