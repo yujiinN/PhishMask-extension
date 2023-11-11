@@ -134,3 +134,15 @@ body{
 #copyrights{
     margin-left: 80px;
 }
+
+#feedbackButton:hover {
+    cursor: pointer;
+  }
+
+#reportButton:hover{
+    cursor: pointer;
+}
+
+#logsButton:hover{
+    cursor: pointer;
+}
