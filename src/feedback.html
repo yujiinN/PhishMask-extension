@@ -4,13 +4,96 @@
   <link href="feedback.css" rel="stylesheet" type="text/css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PhishMask</title>
+  <title>PhishMask - Report Phishing</title>
+  <!-- Ionicons script -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <style>
+    /* Your existing CSS styles */
+
+    body {
+      /* Set the background image with the logo */
+      background: url('navbar logo.png') no-repeat center top fixed;
+      background-size: 100px; /* Adjust the size as needed */
+      background-color: #f8f9fa; /* Fallback background color */
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
+    }
+
+    /* Additional style for the buttons */
+    .buttonContainer {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .btBack,
+    .btOpenLogs,
+    .btFeedback {
+      margin-bottom: 10px; /* Adjust margin as needed */
+      padding: 15px; /* Adjust padding as needed */
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 0; /* Set border-radius to zero */
+      display: flex;
+      align-items: center;
+    }
+
+    .btFeedback span {
+      white-space: nowrap; /* Ensures text stays on one line */
+    }
+
+    .btBack:hover,
+    .btOpenLogs:hover,
+    .btFeedback:hover {
+      background-color: #0056b3;
+    }
+
+    /* Tooltip style */
+    .tooltip {
+      position: absolute;
+      display: none;
+      padding: 5px;
+      background-color: #333;
+      color: #fff;
+      border-radius: 5px;
+      margin-left: 10px; /* Adjust margin as needed */
+    }
+
+    /* Adjust other styles as needed */
+  </style>
 </head>
 
 <body>
+  <div class="buttonContainer">
+    <!-- Home button at the very left corner with Ionicons -->
+    <button class="btBack" onclick="goBack()" onmouseenter="showTooltip('Home')" onmouseleave="hideTooltip()">
+      <ion-icon name="home"></ion-icon>
+      <span class="tooltip" id="tooltipHome">Home</span>
+    </button>
+
+    <!-- Open Logs button slightly below the Home button with Ionicons -->
+    <button class="btOpenLogs" onclick="openLogs()" onmouseenter="showTooltip('OpenLogs')" onmouseleave="hideTooltip()">
+      <ion-icon name="book"></ion-icon>
+      <span class="tooltip" id="tooltipOpenLogs">Open Logs</span>
+    </button>
+
+    <!-- Report Phishing button slightly below the Open Logs button with Ionicons -->
+    <button class="btFeedback" onclick="reportPhishing()" onmouseenter="showTooltip('ReportPhishing')" onmouseleave="hideTooltip()">
+      <ion-icon name="alert"></ion-icon>
+      <span class="tooltip" id="tooltipReportPhishing">Report Phishing</span>
+    </button>
+  </div>
+
   <div id="formContainer">
     <div id="title">
-      <span class="title">Feedback Form</span>
+      <span class="title">Report Phishing</span>
     </div>
 
     <div id="formSection">
@@ -20,12 +103,7 @@
         </div>
         <div>
           <form>
-            <input
-              id="name"
-              type="text"
-              name="name"
-              placeholder="Enter name"
-            />
+            <input id="name" type="text" name="name" placeholder="Enter name" />
           </form>
         </div>
       </div>
@@ -36,12 +114,7 @@
         </div>
         <div>
           <form>
-            <input
-              id="email"
-              type="text"
-              name="email"
-              placeholder="Enter email"
-            />
+            <input id="email" type="text" name="email" placeholder="Enter email" />
           </form>
         </div>
       </div>
@@ -59,11 +132,27 @@
     </div>
 
     <div class="button">
-      <button class="btSubmit" onclick="submitFeedback()">Submit</button>
+      <button class="btSubmit" onclick="submitFeedback()">
+        <ion-icon name="checkmark"></ion-icon> Submit
+      </button>
     </div>
 
     <div id="feedbackMessageContainer"></div>
     <script src="feedback.js"></script>
   </div>
+
+  <script>
+    function showTooltip(id) {
+      const tooltip = document.getElementById(`tooltip${id}`);
+      tooltip.style.display = 'block';
+    }
+
+    function hideTooltip() {
+      const tooltips = document.querySelectorAll('.tooltip');
+      tooltips.forEach((tooltip) => {
+        tooltip.style.display = 'none';
+      });
+    }
+  </script>
 </body>
 </html>
