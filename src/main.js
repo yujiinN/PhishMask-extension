@@ -27,3 +27,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the button element by its ID
+  var reportButton = document.getElementById("reportButton");
+
+  // Add a click event listener to the button
+  reportButton.addEventListener("click", function () {
+    // Redirect to the report.html page or perform any other desired action
+    window.location.href = "report.html";
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the button element by its ID
+  var feedbackButton = document.getElementById("feedbackButton");
+
+  // Add a click event listener to the button
+  feedbackButton.addEventListener("click", function () {
+    // Redirect to the feedback.html page or perform any other desired action
+    window.location.href = "feedback.html";
+  });
+});
+
