@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
     color: #ffffff;
     background: #5478c0; 
     text-align: center;
@@ -133,16 +131,4 @@ body{
 
 #copyrights{
     margin-left: 80px;
-}
-
-#feedbackButton:hover {
-    cursor: pointer;
-  }
-
-#reportButton:hover{
-    cursor: pointer;
-}
-
-#logsButton:hover{
-    cursor: pointer;
 }
